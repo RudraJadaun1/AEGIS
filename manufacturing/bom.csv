@@ -1,0 +1,13 @@
+﻿Designator,Footprint,Quantity,Value,LCSC Part #
+"1, 2, 3, 4",SW_SPST_Omron_B3FS-100xP,4,SW_Omron_B3FS,
+"1K1, R100K1, R100K2, R2.2K1, R2.2K2, R220, R3, R4.7K1, R4.7K2, R4.7K3",0805,10,R,
+BRD1,128x64OLED,1,SSD1306,
+BT1,BatteryHolder_Keystone_1060_1x2032,1,Battery_Cell,
+"C100NF1, C100NF2, C100NF3, C100NF4, C10NF1, C10NF2, C10NF3",0805,7,C,
+J1,JST_PH_S2B-PH-K_1x02_P2.00mm_Horizontal,1,Conn_01x02,
+SW5,RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm,1,RotaryEncoder_Switch,
+SW6,SW_Slide_SPDT_Straight_CK_OS102011MS2Q,1,SW_SPDT,
+"TP3, TP4",TestPoint_Pad_D2.0mm,2,TestPoint,
+U1,XIAO-ESP32S3-DIP,1,XIAO-ESP32-S3-DIP,
+"U2, U3",SOIC-8_3.9x4.9mm_P1.27mm,2,ATECC608B-SSHDA,
+U4,SOIC-8_3.9x4.9mm_P1.27mm,1,DS3231MZ,
