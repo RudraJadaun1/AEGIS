@@ -1,0 +1,13 @@
+"Id";"Designator";"Footprint";"Quantity";"Designation";"Supplier and ref";
+1;"SW6";"SW_Slide_SPDT_Straight_CK_OS102011MS2Q";1;"SW_SPDT";;;
+2;"3,2,1,4";"SW_SPST_Omron_B3FS-100xP";4;"SW_Omron_B3FS";;;
+3;"Brd1";"128x64OLED";1;"SSD1306";;;
+4;"TP4,TP3";"TestPoint_Pad_D2.0mm";2;"TestPoint";;;
+5;"U1";"XIAO-ESP32S3-DIP";1;"XIAO-ESP32-S3-DIP";;;
+6;"SW5";"RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm";1;"RotaryEncoder_Switch";;;
+7;"R2.2k2,R4.7k3,r220,R4.7k2,R2.2k1,R4.7k1,R3,R100k2,R100k1,1K1";"R_0805_2012Metric_Pad1.20x1.40mm_HandSolder";10;"R";;;
+8;"BT1";"BatteryHolder_Keystone_1060_1x2032";1;"Battery_Cell";;;
+9;"C10nf3,C100nf3,C10nf2,C100nf2,C10nf1,C100nf1,C100nf4";"C_0805_2012Metric_Pad1.18x1.45mm_HandSolder";7;"C";;;
+10;"J1";"JST_PH_S2B-PH-K_1x02_P2.00mm_Horizontal";1;"Conn_01x02";;;
+11;"U4";"SOIC-8_3.9x4.9mm_P1.27mm";1;"DS3231MZ";;;
+12;"U2,U3";"SOIC-8_3.9x4.9mm_P1.27mm";2;"ATECC608B-SSHDA";;;
