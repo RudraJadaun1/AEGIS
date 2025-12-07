@@ -95,7 +95,7 @@ Custom firmware written in **C++ (Arduino)**, optimized for security and respons
   - Core 0: SHA1 hashing and secure element communication.  
   - Core 1: UI, animations, input polling for smooth dial operation.  
 - **TOTP Engine:** Implements RFC 6238; reads RTC epoch, hashes with secret using HMAC-SHA1, truncates to 6-digit code.
-- 
+  
 ## License
 
 This project is licensed under the Apache License 2.0 — see the [LICENSE](LICENSE) file for details.
