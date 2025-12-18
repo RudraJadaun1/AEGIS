@@ -9,41 +9,45 @@ A fully offline hardware vault for storing and generating Time-based One-Time Pa
 
 ---
 
-## About The Project
-In an era of cloud breaches ,remote malware, software-based 2FA apps on connected smartphones are no longer enough for critical assets.
+## About The Project  
+In an age of cloud breaches, remote malware, and software-based 2FA apps on connected smartphones, these measures are no longer sufficient for critical assets.  
 
-**Project AEGIS**  is a dedicated hardware token built on a **"Zero Trust"** philosophy.  
-It lacks a USB data connection to the internet, Bluetooth, and Wi-Fi.  
-It keeps your cryptographic texts separate from the network, making sure that your 2FA codes can only be created by someone holding the physical device with a password.
+**Project AEGIS** is a dedicated hardware token based on a **"Zero Trust"** philosophy.  
+It does not have a USB data connection to the internet, Bluetooth, or Wi-Fi.  
+It keeps your cryptographic texts separate from the network, ensuring that only someone with the physical device and a password can create your 2FA codes.
 
 
-
----
-
-## Key Features -
-**Air-Gapped Security:** Zero wireless connectivity.  Attackers cannot hack what they cannot reach.  
-**Dual-Core Isolation:** Security functions are carried out on a separate core from the user interface.  
-**Hardware Root of Trust:** TOTP secrets are stored inside two tamper-resistant cryptographic chips - ATECC608B, not in the microcontroller's flash memory.  
-**A high-accuracy MEMS RTC:** DS3231MZ module is used in precision timekeeping to keep time for years without syncing.  
-**A physical slide switch:** This totally disconnects the battery is known as a "hardware kill switch."  
-**A clear 128x64 display with a tactile dial** for choosing accounts is part of the OLED and rotary interface.  
 
 ---
 
-## Hardware Architecture
+## Key features device comes with -
+**Air-Gapped Security:** Zero wireless connectivity. Bad actors cannot hack what they cannot reach.
+**Dual-Core Isolation:** The security functions run on a different core as the interface for users.
+Hardware Root of Trust: TOTP secrets reside inside two tamper-resistant cryptographic chips - ATECC608B, not in the flash memory of the microcontroller.
+**High accuracy MEMS RTC:** DS3231MZ module for precision timekeeping, maintains time for years without syncing.
+A physical slide switch: This completely cuts off the battery and is known as a "hardware kill switch."
+It comes with an oled 128x64 display and a rotery encoder dial for selecting accounts.
 
-The device is built around the **Seeed Studio XIAO ESP32-S3**, chosen for its dual-core power and compact footprint.  
-The architecture is designed to minimize attack surfaces.
+---
+Hardware Design
 
-### 1. XIAO ESP32-S3
- - **Why:** Dual-core Xtensa LX7 processor running at 240MHz.  BLE and Wi-Fi radios are disabled in firmware.  
- - **Function:**  drives the display, coordinates user input, and queries secure elements.
-   
-   <img width="1400" height="1050" alt="image" src="https://github.com/user-attachments/assets/87b28849-92e9-4488-ba8c-0940f1110e8f" />
 
-### 2.Dual ATECC608B Crypto Chips - 
-**Why:** Private keys stored in hardware-protected slots.  TOTP seeds cannot be extracted from firmware dumps.  
- - **Dual-Head Design:**  To prevent address conflicts and double storage capacity, two chips are placed on different I2C buses (Wire and Wire1).
+
+The main part of the device i\I made is the **Seeed Studio XIAO ESP32-S3**,it have dual-core power with a small Size so that device is small enough
+
+
+
+The architecture was designed to minimize attack surfaces.1. XIAO ESP32-S3
+
+
+
+- **Why:** This has Dual-core Xtensa LX7 processor running at 240MHz. BLE and WiFi radios are strictly disabled by us in this firmware.- **Purpose:**  It drives the display, coordinates user input, and queries secure elements.
+
+
+
+2.Dual ATECC608B Crypto Chips for more protection against attacks -
+
+Why: Private keys are stored in hardware-protected slots with extra protection by us with epoxy resin. TOTP seeds cannot be extracted from firmware dumps.
 
    <img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/0fa446ba-0468-4c35-9670-317bfc95d32b" />
 
