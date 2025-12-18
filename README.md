@@ -1,6 +1,6 @@
 # Project AEGIS
 **No Radio. No Cloud. No Leaks.**  
-A fully offline hardware vault for storing and generating Time-based One-Time Passwords (TOTP) with maximum security.
+A fully offline hardware  for storing and generating Time-based One-Time Passwords (TOTP) with maximum security.
 
 ><img width="658" height="761" alt="image" src="https://github.com/user-attachments/assets/4993c92b-23a1-4115-bc2f-4ef59b50db29" />
 
@@ -74,32 +74,26 @@ Why: Private keys are stored in hardware-protected slots with extra protection b
 > <img width="706" height="522" alt="image" src="https://github.com/user-attachments/assets/8dad6b93-66d0-47ba-be48-d1655a477708" />
 
 
-### Key Circuit Details
-- **Bus Isolation:** Crypto #1 shares "Noisy Bus" (D4/D5) with OLED and RTC; Crypto #2 on "Quiet Bus" (D0/D1) alone.  
-- **Input Ladder:** 4 buttons wired into a resistor ladder network to read all 4 via a single Analog Pin (D7).  
-- **Noise Filtering:** Every IC has a 100nF decoupling capacitor next to its power pin.  
-
+## Key Circuit Details
+- **Bus Isolation:** Crypto #1 is sharing "Noisy Bus" (D4/D5) with OLED and RTC; Crypto #2 on "Quiet Bus" (D0/D1) alone.
+Input Ladder: 4 buttons wired into a resistor ladder network to read all 4 via a single Analog Pin (D7).
+- **Noise Filtering:** There is a 100nF decoupling capacitor next to the power pin on each IC.
 ---
 
 ## PCB Layout
-- **Front Layer (UI):** OLED, rotary encoder, tactile buttons, Xiao.  
-- **Back Layer (Security Core):** Crypto chips, RTC, battery connections, Coin cell.    
+Front Layer (UI): OLED, rotary encoder, tactile buttons, Xiao.
+Back Layer (Security Core): crypto chips, RTC, battery connections, Coin cell.   
   
 > <img width="477" height="401" alt="image" src="https://github.com/user-attachments/assets/74dfb036-3e95-450f-a924-d0c8df2675ea" />
  
 
 ---
 
-## Firmware 
-Custom firmware written in **C++ (Arduino)**, optimized for security and responsiveness.
+Firmware
+Custom firmware in **C++ Arduino**, optimized for security.
 
-### Code Structure
-- **Secure Boot:** Initializes I2C buses and verifies crypto chips; halts if missing (tampering detected).  
-- **Dual-Core Tasking:**  
-  - Core 0: SHA1 hashing and secure element communication.  
-  - Core 1: UI, animations, input polling for smooth dial operation.  
-- **TOTP Engine:** Implements RFC 6238; reads RTC epoch, hashes with secret using HMAC-SHA1, truncates to 6-digit code.
-  
-## License
-
-This project is licensed under the Apache License 2.0 — see the [LICENSE](LICENSE) file for details.
+Structure of Code
+- **Secure Boot:** Initializes I2C buses, verifies crypto chips, and halts if missing (tampering detected).
+- Dual-core tasking
+Core 0: SHA1 hashing and secure element communication.
+Core 1: UI, animations, input polling for smooth dial operation. - **TOTP Engine:** RFC 6238 implementation: reads RTC epoch, hashes with the secret using HMAC-SHA1, and truncates to the 6 digit code.
