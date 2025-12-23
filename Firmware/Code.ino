@@ -1,5 +1,5 @@
 /*
-   PROJECT CERBERUS: AIR-GAPPED HARDWARE VAULT
+   PROJECT AEGIS: AIR-GAPPED HARDWARE VAULT
    Firmware Version: 1.0 (Factory Standard)
    Target: Seeed Studio XIAO ESP32-S3
    
@@ -274,7 +274,7 @@ void showBootLogo() {
   display.clearDisplay();
   display.setTextSize(2);
   display.setCursor(10, 20);
-  display.print("CERBERUS");
+  display.print("AEGIS");
   display.setTextSize(1);
   display.setCursor(30, 45);
   display.print("SYSTEM SECURE");
