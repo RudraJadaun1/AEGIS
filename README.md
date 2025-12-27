@@ -10,11 +10,10 @@ A fully offline hardware  for storing and generating Time-based One-Time Passwor
 ---
 
 ## About The Project  
-In an age of cloud breaches, remote malware, and software-based 2FA apps on connected smartphones, these measures are no longer sufficient for critical assets.  
-
-**Project AEGIS** is a dedicated hardware token based on a **"Zero Trust"** philosophy.  
-It does not have a USB data connection to the internet, Bluetooth, or Wi-Fi.  
-It keeps your cryptographic texts separate from the network, ensuring that only someone with the physical device and a password can create your 2FA codes.
+We live in a time where hacking has become very common, and password breaches are everywhere. What if someone breaches the two-factor authentication (2FA) software on your phone via the internet? So, for this, I present project AEGIS 
+**Project AEGIS** is a dedicated hardware 2 fastor Authentication Device based on a **"Zero Trust"** philosophy.  
+It does not have a USB connection to the internet nor Bluetooth or Wi-Fi.  
+It keeps your Secret Keys separate from the network, ensuring that only someone with the physical device and a password can create your 2FA codes.
 
 
 
