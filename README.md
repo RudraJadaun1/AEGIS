@@ -20,11 +20,15 @@ It keeps your Secret Keys separate from the network, ensuring that only someone 
 ---
 
 ## Key features device comes with -
-**Air-Gapped Security:** Zero wireless connectivity. Bad actors cannot hack what they cannot reach.
-**Dual-Core Isolation:** The security functions run on a different core as the interface for users.
-Hardware Root of Trust: TOTP secrets reside inside two tamper-resistant cryptographic chips - ATECC608B, not in the flash memory of the microcontroller.
-**High accuracy MEMS RTC:** DS3231MZ module for precision timekeeping, maintains time for years without syncing.
-A physical slide switch: This completely cuts off the battery and is known as a "hardware kill switch."
+
+**Air-Gapped Security:** Zero wireless connectivity. Hacker can never ever hack what they cannot reach.
+
+**Dual-Core Isolation:** The device works on 2 different atecc608b chips so that the ui and the keys both stay protected
+
+**High accuracy MEMS RTC:** DS3231MZ module for precision time,this chip maintains time for years without drifting.
+
+**A physical slide switch:** This completely cuts off the battery and is known as a "hardware kill switch."
+
 It comes with an oled 128x64 display and a rotery encoder dial for selecting accounts.
 
 ---
