@@ -1,6 +1,5 @@
 # Project AEGIS
-**No Radio. No Cloud. No Leaks.**  
-A fully offline hardware  for storing and generating Time-based One-Time Passwords (TOTP) with maximum security.
+This is Project AEGIS. This is a mini PCB that I made that is basically a two-factor authentication app, but better. You may ask why, because this device has no connection with the external world except you. It works on an ESP32-S3 chip, which is kind of fishy, pointing out that it contains both Bluetooth and Wi-Fi, but in AEGIS we physically disable the Wi-Fi and Bluetooth chips on the board, so these network protocols don’t work under any conditions. Also, we have used two ATECC608B chips, which keep the two-factor authentication seeds secure and inaccessible from the external world, so nobody can access and replicate the codes.
 
 ><img width="658" height="761" alt="image" src="https://github.com/user-attachments/assets/4993c92b-23a1-4115-bc2f-4ef59b50db29" />
 
@@ -10,11 +9,13 @@ A fully offline hardware  for storing and generating Time-based One-Time Passwor
 ---
 
 ## About The Project  
-We live in a time where hacking has become very common, and password breaches are everywhere. What if someone breaches the two-factor authentication (2FA) software on your phone via the internet? So, for this, I present project AEGIS 
+In today’s time, we cannot trust any app because any hacker can just breach into your phone and steal your important information. In the same way, professional hackers can leak the two-factor authentication codes that are made to protect passwords from getting hacked. So, for this exact reason, I decided to create Project AEGIS.
 
-**Project AEGIS** is a dedicated hardware 2 fastor Authentication Device based on a **"Zero Trust"** philosophy.  
-It does not have a USB connection to the internet nor Bluetooth or Wi-Fi.  
-It keeps your Secret Keys separate from the network, ensuring that only someone with the physical device and a password can create your 2FA codes.
+**Project AEGIS** is a dedicated hardware 2 fastor Authentication Device based on a **"Zero Trust"** philosophy.
+
+It does not have a USB connection to the internet the mcu it uses have its blutootth and wifi physically disabled  
+
+Our project keeps your TOTP keys safe and away from the network, so no one can access them, ensuring that only someone with the physical device and a password can create your 2FA codes
 
 
 
@@ -22,13 +23,13 @@ It keeps your Secret Keys separate from the network, ensuring that only someone 
 
 ## Key features device comes with -
 
-**Air-Gapped Security:** Zero wireless connectivity. Hacker can never ever hack what they cannot reach.
+**Air-Gapped Security:** The device has zero connection from outside world no one can hack something they cannot reach
 
 **Dual-Core Isolation:** The device works on 2 different atecc608b chips so that the ui and the keys both stay protected
 
 **High accuracy MEMS RTC:** DS3231MZ module for precision time,this chip maintains time for years without drifting.
 
-**A physical slide switch:** This completely cuts off the battery and is known as a "hardware kill switch."
+**A physical slide switch:** this is just a switch that prevent background attacks
 
 It comes with an oled 128x64 display and a rotery encoder dial for selecting accounts.
 
